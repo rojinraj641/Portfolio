@@ -2,12 +2,14 @@ import { motion } from "framer-motion";
 
 const AboutMe = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-[#302b63] px-4 sm:px-6 md:px-10 py-16 sm:py-24">
+    <section
+    id="aboutme"
+     className="min-h-screen flex flex-col items-center justify-center bg-[#302b63] px-4 sm:px-6 md:px-10 py-16 sm:py-24">
       <motion.div
         className="w-full max-w-4xl bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl shadow-2xl p-6 sm:p-10 text-white text-center"
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        transition={{ duration: 1, ease: "easeOut" }}
         viewport={{ once: true }}
       >
         {/* Title */}

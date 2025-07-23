@@ -3,13 +3,14 @@ import { Typewriter } from "react-simple-typewriter";
 import {
     FaGithub,
     FaLinkedin,
-    FaInstagram,
     FaCode,
 } from "react-icons/fa";
 
 const HomePage = () => {
     return (
-        <div className="min-h-screen pt-20 bg-gradient-to-b from-[#0f0c29] to-[#302b63]  text-white">
+        <section
+        id="home"
+        className="min-h-screen pt-20 bg-gradient-to-b from-[#0f0c29] to-[#302b63]  text-white">
             <motion.div
                 className="flex flex-col items-center justify-center text-center px-4 py-16 md:py-32"
                 initial={{ opacity: 0, y: 50 }}
@@ -51,7 +52,7 @@ const HomePage = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.6, duration: 0.8 }}
                 >
-                    Full Stack Web Developer | MERN Stack Enthusiast
+                    Full Stack Web Developer | MERN Stack
                 </motion.p>
 
                 {/* Button */}
@@ -80,7 +81,7 @@ const HomePage = () => {
                         <FaGithub />
                     </a>
                     <a
-                        href="https://linkedin.com/in/yourusername"
+                        href="https://www.linkedin.com/in/rojin-raj-22025229b/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-white text-2xl hover:text-blue-400 transition duration-300"
@@ -88,15 +89,7 @@ const HomePage = () => {
                         <FaLinkedin />
                     </a>
                     <a
-                        href="https://www.instagram.com/yourusername"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-white text-2xl hover:text-pink-500 transition duration-300"
-                    >
-                        <FaInstagram />
-                    </a>
-                    <a
-                        href="https://leetcode.com/yourusername"
+                        href="https://leetcode.com/u/rojin_raj96/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-white text-2xl hover:text-yellow-400 transition duration-300"
@@ -105,7 +98,7 @@ const HomePage = () => {
                     </a>
                 </motion.div>
             </motion.div>
-        </div>
+        </section>
     )
 }
 

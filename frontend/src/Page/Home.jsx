@@ -1,7 +1,7 @@
 import Navbar from "../Components/Navbar";
 import AboutMe from "../Components/AboutMe";
-import HomePage from "../Components/HomePage"
-
+import HomePage from "../Components/HomePage";
+import Education from "../Components/Education";
 const Home = () => {
 
   return (
@@ -9,6 +9,7 @@ const Home = () => {
       <Navbar />
       <HomePage/>
       <AboutMe />
+      <Education />
     </div>
   );
 };
