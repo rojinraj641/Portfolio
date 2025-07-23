@@ -57,7 +57,7 @@ const HomePage = () => {
 
                 {/* Button */}
                 <motion.a
-                    href="/RojinRaj_Resume.pdf"
+                    href="./RojinRaj_Resume.pdf"
                     download
                     whileHover={{ scale: 1.08 }}
                     whileTap={{ scale: 0.95 }}
