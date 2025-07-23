@@ -61,7 +61,7 @@ const HomePage = () => {
                     download
                     whileHover={{ scale: 1.08 }}
                     whileTap={{ scale: 0.95 }}
-                    className="px-6 py-3 border border-white rounded-lg bg-white/10 backdrop-blur-md text-white font-semibold transition hover:bg-white/20 hover:shadow-md"
+                    className="px-6 py-3 rounded-lg bg-pink-500 backdrop-blur-md text-white font-semibold transition hover:bg-white/20 hover:shadow-md"
                 >
                     Download CV
                 </motion.a>
