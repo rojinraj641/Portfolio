@@ -6,7 +6,7 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
 
-  const navItems = ["Home", "About Me", "Education", "Skills", "Contact Me"];
+  const navItems = ["Home", "About Me", "Education", "Skills", "Get in Touch"];
 
   useEffect(() => {
     setMounted(true);
