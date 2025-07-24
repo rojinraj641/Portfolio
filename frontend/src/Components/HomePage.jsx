@@ -24,7 +24,7 @@ const HomePage = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3, duration: 0.8 }}
                 >
-                    Heyy there, I’m{" "}
+                    Hey there, I’m{" "}
                     <span className="text-pink-400">
                         <Typewriter
                             words={["Rojin Raj"]}

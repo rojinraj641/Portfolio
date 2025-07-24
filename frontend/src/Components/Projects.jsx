@@ -4,7 +4,7 @@ import { FaGithub } from "react-icons/fa";
 const Project = () => {
     return (
         <section
-            id="project"
+            id="projects"
             className="min-h-screen px-4 py-14 bg-[#302b63] flex flex-col items-center justify-center"
         >
             <motion.h1

@@ -11,6 +11,7 @@ const Contact = () => {
     const name = form.name.value.trim();
     const email = form.email.value.trim();
     const message = form.message.value.trim();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!name) {
       toast.error("Hey, what's your good name? Don’t be mysterious like Batman.");
@@ -23,6 +24,9 @@ const Contact = () => {
     if (!message) {
       toast.error("C'mon, at least say hi. I don’t bite… usually.");
       return;
+    }
+    if(!emailRegex.test(email)){
+      toast.error('Haha I like that, now give me a valid emailId')
     }
 
     form.submit(); 
@@ -38,7 +42,7 @@ const Contact = () => {
       <Toaster richColors />
       <form
         ref={formRef}
-        action="https://formsubmit.co/rojinraj96@gmail.com" // <-- replace this with your email
+        action="https://formsubmit.co/rojinraj96@gmail.com"
         method="POST"
         className="w-full max-w-xl glassmorphic p-8 sm:p-10 flex flex-col gap-6 rounded-2xl border border-white/10 shadow-lg"
       >
@@ -46,7 +50,6 @@ const Contact = () => {
           Get in Touch
         </h1>
 
-        {/* Anti-spam honeypot (optional but recommended) */}
         <input type="hidden" name="_captcha" value="false" />
         <input type="hidden" name="_next" value="https://yourportfolio.com/thanks" />
 
