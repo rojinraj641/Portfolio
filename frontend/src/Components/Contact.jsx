@@ -11,7 +11,7 @@ const Contact = () => {
     const name = form.name.value.trim();
     const email = form.email.value.trim();
     const message = form.message.value.trim();
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;;
 
     if (!name) {
       toast.error("Hey, what's your good name? Don’t be mysterious like Batman.");
@@ -22,7 +22,8 @@ const Contact = () => {
       return;
     }
     if(!emailRegex.test(email)){
-      toast.error('Haha I like that, now give me a valid emailId')
+      toast.error('Haha I like that, now give me a valid emailId');
+      return;
     }
     if (!message) {
       toast.error("C'mon, at least say hi. I don’t bite… usually.");
