@@ -1,8 +1,10 @@
 import { Toaster, toast } from "sonner";
 import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Contact = () => {
   const formRef = useRef(null);
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -31,6 +33,7 @@ const Contact = () => {
     }
     toast.success("Thanks! Your message has been launched into the inbox void");
     form.reset();
+    navigate('/thanks');
   };
 
   return (
