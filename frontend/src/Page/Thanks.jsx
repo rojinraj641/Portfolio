@@ -1,16 +1,24 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const Thanks = () => {
   const navigate = useNavigate();
+  const [timer,setTimer] = useState(5)
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      navigate("/");
-    }, 5000); // 5 seconds
-
-    return () => clearTimeout(timer); // cleanup on unmount
+    const interval = setInterval(()=>{
+      setTimer((prev)=>{
+        if(prev<=1){
+          clearInterval(interval)
+          navigate('/')
+          return 0;
+        }
+        return prev-1;
+      })
+    },1000)
+    
+    return () => clearInterval(interval); 
   }, [navigate]);
 
   return (
@@ -27,7 +35,7 @@ const Thanks = () => {
       </motion.h1>
 
       <p className="text-white text-center font-medium">
-        You’ll be redirected to the homepage in 5 seconds.
+        You’ll be redirected to the homepage in {timer} seconds.
       </p>
 
       <button

@@ -22,14 +22,13 @@ const Contact = () => {
       return;
     }
     if(!emailRegex.test(email)){
-      toast.error('Haha I like that, now give me a valid emailId');
+      toast.error('Haha I like that, now give me a valid email');
       return;
     }
     if (!message) {
       toast.error("C'mon, at least say hi. I don’t bite… usually.");
       return;
     }
-    form.submit(); 
     toast.success("Thanks! Your message has been launched into the inbox void");
     form.reset();
   };
